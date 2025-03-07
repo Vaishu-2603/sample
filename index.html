@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Webpage</title>
+    <style>
+        /* CSS for styling the page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            transition: background-color 0.5s ease;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header section -->
+    <header>
+        <h1>Welcome to My Interactive Webpage</h1>
+        <p>Click the button below to change the background color.</p>
+    </header>
+
+    <!-- Button that will trigger JavaScript -->
+    <button id="changeColorButton">Change Background Color</button>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2025 Interactive Webpage. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript to change the background color
+        document.getElementById("changeColorButton").addEventListener("click", function() {
+            // Array of colors to choose from
+            const colors = ["#f2f2f2", "#f39c12", "#2ecc71", "#e74c3c", "#3498db", "#9b59b6"];
+            // Randomly select a color from the array
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            // Apply the selected color as the background color
+            document.body.style.backgroundColor = randomColor;
+        });
+    </script>
+
+</body>
+</html>
